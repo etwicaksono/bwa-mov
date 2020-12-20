@@ -30,13 +30,6 @@ class SignInActivity : AppCompatActivity() {
 
         preference.setValues("onboarding", "1")
 
-        if (preference.getValues("status").equals("1")) {
-            finishAffinity()
-
-            var goHome = Intent(this@SignInActivity, HomeActivity::class.java)
-            startActivity(goHome)
-        }
-
         btn_sign_in.setOnClickListener({
             iUsername = et_username.text.toString()
             iPassword = et_password.text.toString()
